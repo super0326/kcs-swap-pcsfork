@@ -22,7 +22,7 @@ type MergedState = {
   }
 }
 const PERSISTED_KEYS: string[] = ['user', 'transactions']
-const loadedState = load({ states: PERSISTED_KEYS }) as MergedState
+const loadedState = load({ states: PERSISTED_KEYS }) as any
 if (loadedState.user) {
   loadedState.user.userDarkMode = getThemeCache()
 }
